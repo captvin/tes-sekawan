@@ -1,0 +1,998 @@
+{
+	"info": {
+		"_postman_id": "3b03d080-109b-449b-822f-8be07ccd1a23",
+		"name": "tes sekawan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19084471"
+	},
+	"item": [
+		{
+			"name": "pegawai",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "alvin",
+									"type": "text"
+								},
+								{
+									"key": "penempatan",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "alvin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "alvin",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "superadmin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pegawai",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pegawai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pegawai/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pegawai",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "adhe",
+									"type": "text"
+								},
+								{
+									"key": "penepatan",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "adhe",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "adhe",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pegawai/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pegawai",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pegawai/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pegawai",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "kantor",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_kantor",
+									"value": "kantor cabang",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Jl. sma org lain",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/kantor",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kantor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/kantor/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kantor",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_kantor",
+									"value": "kantor",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "jl. sma org lainnya",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/kantor/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kantor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/kantor/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"kantor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tambang",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "tambang 4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/tambang",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tambang"
+							],
+							"query": [
+								{
+									"key": "nama",
+									"value": "tambang 1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "tambang gancok",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/tambang/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tambang",
+								"7"
+							],
+							"query": [
+								{
+									"key": "nama",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tambang/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tambang",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "driver",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "sumarli",
+									"type": "text"
+								},
+								{
+									"key": "penempatan_tambang",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/driver",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama",
+									"value": "lohe lohe",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/driver/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"driver",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/driver/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"driver",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "unit",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nomor_unit",
+									"value": "S 47 VIN",
+									"type": "text"
+								},
+								{
+									"key": "nama_model",
+									"value": "Toyota Hilux",
+									"type": "text"
+								},
+								{
+									"key": "jenis_BBM",
+									"value": "diesel",
+									"type": "text"
+								},
+								{
+									"key": "jenis_angkutan",
+									"value": "barang",
+									"type": "text"
+								},
+								{
+									"key": "average_BBM",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "service",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/USER/Downloads/Toyota-Hilux-PNG-Images-HD.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/unit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"unit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/unit/service/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"unit",
+								"service",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nomor_unit",
+									"value": "S 47 VIN",
+									"type": "text"
+								},
+								{
+									"key": "nama_model",
+									"value": "Toyota Hilux",
+									"type": "text"
+								},
+								{
+									"key": "jenis_BBM",
+									"value": "diesel",
+									"type": "text"
+								},
+								{
+									"key": "jenis_angkutan",
+									"value": "barang",
+									"type": "text"
+								},
+								{
+									"key": "average_BBM",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "service",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/USER/PICT/Screenshots/Screenshot 2023-05-02 003052.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/unit/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"unit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pemesanan",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pemesan",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "penyetuju",
+									"value": "7",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "unit",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "driver",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tambang",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pemesanan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pemesanan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6Im9mZmljaWFsIiwidXNlcm5hbWUiOiJkZXZpbiIsImlhdCI6MTY4ODcxMTUwOCwiZXhwIjoxNjg4OTcwNzA4fQ.D65LG1rtT0lnKT6J0KTX2jPCbaSn916Gm2ozD28Um54",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status_pesan",
+									"value": "disetujui",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pemesanan/status/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pemesanan",
+								"status",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Nywicm9sZSI6Im9mZmljaWFsIiwidXNlcm5hbWUiOiJkZXZpbiIsImlhdCI6MTY4ODcxMTUwOCwiZXhwIjoxNjg4OTcwNzA4fQ.D65LG1rtT0lnKT6J0KTX2jPCbaSn916Gm2ozD28Um54",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "unit",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "driver",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "tambang",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/pemesanan/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pemesanan",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kembali",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyYWRtaW4iLCJ1c2VybmFtZSI6ImFsdmluIiwiaWF0IjoxNjg4NTczODIyLCJleHAiOjE2ODg4MzMwMjJ9.bojQ11g4jtTLjnqBjMIlvIrGTFDpQq5JoLzBBK5gHUY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pemesanan/selesai/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pemesanan",
+								"selesai",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "alvin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "alvin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080"
+		}
+	]
+}
