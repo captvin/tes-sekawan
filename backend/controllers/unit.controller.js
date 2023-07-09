@@ -39,16 +39,17 @@ async function findAll(req, res, next) {
         options.where['nama_model'] = { [Op.like]: `%${nama_model}%` }
     }
 
-    const result = await unit.findAndCountAll(options)
-    const totalPage = Math.ceil(result.count / limit)
-    const rowsWithImageData = result.rows.map((row) => {
+    const hasil = await unit.findAndCountAll(options)
+    const count = await unit.count()
+    const totalPage = Math.ceil(hasil.count / limit)
+    const result = hasil.rows.map((row) => {
         const imagePath = path.join(__dirname, '..', 'image', row.image);
         const image = fs.readFileSync(imagePath, { encoding: 'base64' });
         const imageData = `data:image/png;base64,${image}`;
         return { ...row.dataValues, imageData };
     })
     
-    res.json({ currentPage: page, totalPage, rowLimit: limit, rowsWithImageData })
+    res.json({ currentPage: page, totalPage, rowLimit: limit, result, count})
 }
 
 async function findById(req, res, next) {

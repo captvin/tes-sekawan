@@ -25,6 +25,24 @@ const DefaultLayout = ({ children, noNavbar, noFooter }) => (
   </Container>
 );
 
+export const LoginLayout = ({ children }) => (
+    <Container fluid>
+      <Row>
+        <Col
+          className="main-content p-0"
+          lg={{ size: 10, offset: 2 }}
+          md={{ size: 9, offset: 3 }}
+          sm="12"
+          tag="main"
+        >
+          {children}
+        </Col>
+      </Row>
+    </Container>
+  )
+  
+  
+
 DefaultLayout.propTypes = {
   /**
    * Whether to display the navbar, or not.

@@ -1,21 +1,34 @@
 import React, { useState } from "react";
+import axios from '../axios'
+import { Redirect } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   const handleLogin = () => {
-    // Lakukan logika login di sini, misalnya memeriksa kecocokan username dan password dengan data yang valid.
-    // Anda dapat menggunakan state, Redux, atau backend API untuk proses autentikasi sesuai kebutuhan.
 
-    // Contoh sederhana: Jika username dan password benar, tampilkan pesan berhasil login.
-    if (username === "admin" && password === "password") {
-      alert("Login berhasil!");
-      setErrorMessage("");
-    } else {
-      setErrorMessage("Login gagal. Silakan cek kembali username dan password Anda.");
+    const Login = async () => {
+      try {
+        const response = await axios.post('/login', {
+          username: username,
+          password: password
+        });
+        console.log(response.data)
+
+        
+
+        if (response.data.logged === true) {
+          // Arahkan pengguna ke halaman dashboard
+          sessionStorage.setItem('loginData', JSON.stringify(response.data));
+          sessionStorage.setItem('token', JSON.stringify(response.data.token));
+          window.location.href = '/dashboard'
+        }
+      } catch (error) {
+        console.log("Terjadi kesalahan:", error);
+      }
     }
+    Promise.all([Login()])
   };
 
   return (
@@ -39,9 +52,10 @@ const Login = () => {
           />
         </div>
         <button type="button" onClick={handleLogin}>Login</button>
-        {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
+
+
   );
 };
 
