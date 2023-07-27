@@ -84,7 +84,7 @@ async function create(req, res, next) {
     if (!image) {
 
         if (already) {
-            return res.send({ message: "Tipe already exists" })
+            return res.send({ message: "Unit already exists" })
         }
         else {
             body.image = "no_image.jpg"
@@ -95,7 +95,7 @@ async function create(req, res, next) {
 
     else {
         if (already) {
-            return res.send({ message: "Tipe already exists" })
+            return res.send({ message: "Unit already exists" })
         }
         else {
             const img_name = "img-" + Date.now() + path.extname(image)
@@ -121,7 +121,7 @@ async function update(req, res, next) {
 
     if (!image) {
         if (already) {
-            return res.json({ message: "Tipe already exists" })
+            return res.json({ message: "Unit already exists" })
         }
         else {
 
