@@ -3,7 +3,7 @@ const { NotFound, Forbidden } = require('http-errors')
 const { Op } = require('sequelize')
 
 async function findAll(req, res, next) {
-    if (req.user.abilities.cannot('read', detail)) {
+    if (req.user.abilities.cannot('read', pemesanan)) {
         return next(Forbidden())
     }
     const page = Number(req.query.page) || 1
@@ -46,7 +46,7 @@ async function findAll(req, res, next) {
 }
 
 async function findById(req, res, next) {
-    if (req.user.abilities.cannot('read', detail)) {
+    if (req.user.abilities.cannot('read', pemesanan)) {
         return next(Forbidden())
     }
     const relations = []
@@ -69,8 +69,9 @@ async function create(req, res, next) {
     body.pemesan = req.user.id
     body.tgl_pesan = new Date().toISOString().substr(0, 10)
     const dipakai = await unit.findOne({ where: { id: body.unit } })
+    console.log()
 
-    if (dipakai.status === 'tidak_tersedia') {
+    if (dipakai.status_pesan === 'tidak_tersedia') {
         return res.json({ message: "unit dengan nomor unit " + dipakai.nomor_unit + " sedang dipakai" })
     }
     else {
