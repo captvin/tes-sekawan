@@ -9,3 +9,5 @@ npm-debug.log*
 backend/config/config.json
 
 backend/.env
+
+backend/docker-compose.yml
