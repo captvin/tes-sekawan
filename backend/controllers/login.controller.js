@@ -8,7 +8,7 @@ async function login(req, res, next) {
 
     const result = await pegawai.findOne({ where: { username } })
     if (!result) {
-        return res.json({ message: "Pegawai not found" }).status(401)
+        return res.json({ logged: false,  message: "Pegawai not found" }).status(401)
     }
 
     const { password } = req.body
@@ -29,6 +29,7 @@ async function login(req, res, next) {
 
     else {
         return res.json({
+            logged: false,
             message: "Wrong password",
         }).status(401)
     }
