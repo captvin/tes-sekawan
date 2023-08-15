@@ -18,10 +18,10 @@ async function findAll(req, res, next) {
         where: {}
     }
 
-    const { alamat } = req.query
+    const { nama_kantor } = req.query
 
-    if (alamat) {
-        options.where['alamat'] = { [Op.like]: `%${alamat}%` }
+    if (nama_kantor) {
+        options.where['nama_kantor'] = { [Op.like]: `%${nama_kantor}%` }
     }
 
     const result = await kantor.findAndCountAll(options)
